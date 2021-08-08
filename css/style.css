@@ -1,0 +1,179 @@
+/* Configuración Inicial */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+:root {
+  /* Colores */
+  --Negro: #222222;
+  --Gris: #e5e5e5;
+  --Rojo: #fc200c;
+  --Blanco: #ffffff;
+  /* Tipografias */
+  --Roboto: "Roboto", sans-serif;
+}
+
+/* Funciones */
+
+@-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: scale(1) rotateZ(0);
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(2) rotateZ(180deg);
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateZ(360deg);
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+/* Configuración General */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: var(--Roboto);
+}
+
+/* Estilos del Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Negro);
+}
+
+header img {
+  margin: 0.5rem 1rem;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  color: var(--Blanco);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+/* Estilos del Main */
+
+main {
+  background-color: var(--Gris);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .delivery {
+  position: relative;
+  margin: 2rem;
+}
+
+main .delivery h2 {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  color: var(--Rojo);
+}
+
+main .delivery h2 span {
+  color: var(--Blanco);
+}
+
+main .delivery img {
+  border-radius: 1rem;
+}
+
+main .top_Pizzas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--Blanco);
+  width: 490px;
+  height: 350px;
+  max-width: 490px;
+  max-height: 350px;
+  border-radius: 1rem;
+}
+
+main .top_Pizzas h2 {
+  color: var(--Rojo);
+}
+
+main .top_Pizzas .container_top {
+  display: flex;
+}
+
+main .top_Pizzas .container_top ol {
+  margin: 0 1.5rem;
+}
+
+main .top_Pizzas .container_top ol h3 {
+  margin: 1rem 0;
+}
+
+main .top_Pizzas .container_top ol li {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* Estilos del Footer */
+
+footer {
+  background-color: var(--Negro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul li {
+  color: var(--Blanco);
+  list-style: none;
+  margin: 0 1.5rem;
+}
+
+footer img {
+  margin: 1rem 1rem;
+}
+
+/* Estilos de Animación */
+
+header img:hover {
+  -webkit-animation: rotate-scale-up 0.65s linear both;
+  animation: rotate-scale-up 0.65s linear both;
+}
+
+footer img:hover {
+  -webkit-animation: rotate-scale-up 0.65s linear both;
+  animation: rotate-scale-up 0.65s linear both;
+}
